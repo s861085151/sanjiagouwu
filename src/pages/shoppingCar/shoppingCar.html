@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../styles/pages/shoppingCar/shoppingCar.css"/>
+	</head>
+	<body>
+		<div class="header typeArea clear">
+			<div class="car_logo">
+				<a href=""><img src="../../styles/pages/img/logo.png" alt="" /></a>
+			</div>
+			<div class="flow">
+				<p class="flow1">查看购物车</p>
+				<p class="flow2">确认订单信息</p>
+				<p class="flow3">成功提交订单</p>
+				<p class="flow4">支付订单成功</p>
+			</div>
+		</div>
+		<div class="shoppingCar typeArea clear">
+			<h3 class="goods_car_count">购物车(2件)</h3>
+			<div class="goodsListHearder">
+				<div class="goodsListHearder_choose">
+					<div class="picCircle picAll">
+						<lable class="checkBtn" for="check">
+							<input type="checkbox" data-item="items" name="check" class="checkAll">
+						</lable>
+					</div>
+					全选
+				</div>
+				<div class="goodsListHearder_detail">商品详情</div>
+				<div class="goodsListHearder_unitPrice">单价</div>
+				<div class="goodsListHearder_count">数量</div>
+				<div class="goodsListHearder_money">金额</div>
+				<div class="goodsListHearder_operate">操作</div>
+			</div>
+			<div class="goodsListBody">
+				<table class="table_main">
+					<script id="goodCarList" type="text/html">
+						<%let goodCarData = JSON.parse(localStorage.getItem("goodCar"))%>
+						<%for(let i=0; i<goodCarData.length; i++) {%>
+							<%let num = goodCarData[i].p_count*goodCarData[i].p_price%>;
+							<tr class="goods_row">
+								<td class="goods_choose">
+									<lable class="checkBtn" for="check">
+										<input type="checkbox" data-item="items" name="check" class="checkInput">
+									</lable>
+								</td>
+								<td class="goods_desc">
+									<a href="">
+										<div class="good_Img">
+											<img src="<%=goodCarData[i].p_img%>" alt="" />
+										</div>
+										<div class="good_info">
+											<p class="name"><%=goodCarData[i].p_name%></p>
+											<p class="type">规格：默认款式</p>
+										</div>
+									</a>
+								</td>
+								<td class="goods_unitPrice"><%=goodCarData[i].p_price%></td>
+								<td class="good_count">
+									<button class="minus"></button>
+									<input type="text" value="<%=goodCarData[i].p_count%>" class="p_count" />
+									<input type="hidden" value="<%=goodCarData[i].p_code%>" class="p_code" />
+									<button class="add"></button>
+								</td>
+								<td class="goods_money">￥<%=num%></td>
+								<td class="operate">
+									<p class="collect"><a href="">移入我的收藏</a></p>
+									<p class="remove">删除</p>
+								</td>
+							</tr>
+						<%}%>
+						
+					</script>
+					
+				</table>
+			</div>
+		</div>
+		<div class="goodsInAll">
+			<div class="typeArea">
+				<div class="choose_delete">删除选中商品</div>
+				<div class="detail">
+					已选<span class="selected">0</span>件商品实付款（不含运费）：<i>￥</i><span class="totalCost">0</span>
+				</div>
+				<button class="close"><a href="">去结算</a></button>
+			</div>
+		</div>
+		<div id="footer"></div>	
+	</body>
+	<script src="../../static/scripts/require.js" data-main="../../scripts/pages/shoppingCar/shoppingCar.js"></script>
+	<script src="../../scripts/libs/jquery-2.0.3.min.js"></script>
+	<script>
+		$("#footer").load("../foot/footer.html")
+	</script>
+</html>

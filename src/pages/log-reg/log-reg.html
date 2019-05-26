@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../styles/pages/log-reg/log-reg.css" />
+	</head>
+	<body>
+		<div class="header">
+			<a href="../home/index.html">
+				<img src="../../styles/pages/img/logo.png" alt="" />
+			</a>
+		</div>
+		<div class="main">
+			<div class="typeArea">
+				<div class="banner">
+					<img src="../../styles/pages/img/banner.png" alt="" />
+				</div>
+				<div id="log-reg" class="log-reg">
+					<div id="click_tap" class="click_tap">
+						<h5 class="log_left hover">
+							账号密码登录
+						</h5>
+						<h5 class="reg_right">
+							手机快速登录/注册
+						</h5>
+					</div>
+					<!--登陆-->
+					<div class="log_input">
+						<form action="http://localhost:9999/pages/home/index.html" method="post" class="form_log">
+							<div class="user_log">
+								<span class="iconfont icon-yonghu"></span>
+								<input id="user_log_input" type="text" name="username" placeholder="用户名/手机号"/>
+							</div>
+							<div class="pwd_log">
+								<span class="iconfont icon-mima"></span>
+								<input id="pwd_log_input" class="pwd_log_input" type="password" name="password" placeholder="密码"/>
+								<span class="iconfont icon-ziyuan eyes"></span>
+							</div>
+							<div class="login">
+								<input id="login-btn" type="button" value="立即登录" />
+							</div>
+						</form>
+					</div>
+					<!--注册-->
+					<div class="reg_input">
+						<form action="" method="post">
+							<div class="user_reg">
+								<span class="iconfont icon-shouji-copy"></span>
+								<input type="text" name="username" placeholder="请输入手机号" id="phone_reg_input"/>
+								<p class="phone_reg">手机号码格式不正确</p>
+							</div>
+							<div class="pwd_log">
+								<span class="iconfont icon-mima"></span>
+								<input id="pwd_reg_input" type="password" name="password" placeholder="密码" class="pwd_log_input"/>
+								<span class="iconfont icon-ziyuan eyes"></span>
+							</div>
+							<div class="pwd_reg">
+								<span class="iconfont icon-jiaoyanma"></span>
+								<input type="text" name="code" placeholder="请输入验证码" id="code_reg_input"/>
+								<div class="canvas"><canvas id="canvas" class="code_reg"></canvas></div>
+							</div>
+							<div class="node_reg" style="display: none;">
+								<span class="iconfont icon-yanzhengma"></span>
+								<input type="text" name="code" placeholder="请输入短信验证码"/>
+								<a href="">获取短信验证码</a>
+							</div>
+							<div class="login">
+								<input id="login_btn" type="button" value="立即注册"/>
+							</div>
+							<div class="agreement">
+								<div class="error">必须同意三佳注册协议才能登陆</div>
+								<p>
+									<input id="checkInput" type="checkbox" checked="checked" /><i>同意</i>
+								</p>
+								<a href="https://www.ttcj.tv/mall/center/registerAgreement.htm">《三佳用户注册协议》</a>
+								<a href="https://www.ttcj.tv/mall/center/privacyAgreement.htm">《用户隐私策略》</a>
+							</div>
+						</form>
+					</div>
+					<div class="bottom_group">
+						<a href="">忘记密码</a>
+						<a href="" class="television">电视顾客激活</a>
+					</div>
+				</div>
+			</div> 
+		</div>
+		<div id="footer"></div>	
+	</body>
+	<script src="../../static/scripts/require.js" data-main="../../scripts/pages/log-reg/log-reg.js"></script>
+	<script src="../../scripts/libs/jquery-2.0.3.min.js"></script>
+	<script>
+		$("#footer").load("../foot/footer.html")
+	</script>
+</html>

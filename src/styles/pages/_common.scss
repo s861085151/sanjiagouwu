@@ -1,0 +1,56 @@
+@import "./iconfont";
+
+html {
+    font-size: 14px;
+}
+body,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,dt,form,fieldset,legend,input,textarea,select{
+    margin:0;
+    padding:0;
+}
+h3,h4,h5,h6{
+    font-weight: 500;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul,li {
+    list-style: none;
+}
+i,em,b,strong {
+    font-style: normal;  
+}
+img {
+    border:0;
+    vertical-align:middle;
+}
+$width: 100% !default;        
+$typeArea: 1200px !default;     //版心
+
+.typeArea {
+    width: $typeArea;
+    margin: 0 auto;
+}
+
+//万能清除法
+.clear {
+    &:after {
+        content: ".";
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+    zoom: 1;
+}
+
+img {
+    vertical-align: middle
+}
+
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}

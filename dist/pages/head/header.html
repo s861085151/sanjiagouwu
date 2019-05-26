@@ -1,0 +1,129 @@
+
+		<link rel="stylesheet" type="text/css" href="../../styles/pages/head/header.css" />
+
+		<div class="header">
+			<div class="typeArea clear">
+				<ul>
+					<li>
+						<a href="" class="log">登陆</a>
+					</li>
+					<li>
+						<a href="" class="reg">注册</a>
+					</li>
+					<span>|</span>
+					<li>
+						<a href="">我的主页</a>
+					</li>
+					<span>|</span>
+					<li>
+						<a href="">联系客服</a>
+					</li>
+					<span>|</span>
+
+					<li>
+						<a href=""><span class="iconfont icon-shouji-copy"></span>手机版</a>
+						<span class="code">
+							<i class="triangle"></i>
+							<img src="../../styles/pages/img/applink.png"/>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="top_nav clear">
+			<div class="typeArea">
+				<div class="banner">
+					<a href=""><img src="https://image.ttcj.tv/images/zh/upload/logo/pc_logo.png?i=2" /></a>
+				</div>
+				<div class="live_video">
+					<a href="">
+						<div class="video_left">
+							<img src="https://image.ttcj.tv/item_images/01/167901S1.jpg" alt="" />
+							<span class="enter">
+								<i class="triangle iconfont icon-triangle"></i>
+							</span>
+						</div>
+						<div class="video_right">
+							<p>
+								<span class="text"><i class="dian"></i>直播中</span>
+								<span class="time">09:00</span>
+							</p>
+							<p class="listname">
+								以色列Sal-Vento莎雯半泥半盐死海皂
+							</p>
+							<p class="listprice">¥299.0</p>
+						</div>
+					</a>
+				</div>
+				<div class="search">
+					<input class="inputsearch" placeholder="搜索商品编号/类别">
+					<span class="iconfont icon-fangdajing"></span>
+					<div class="searchnav">
+						<a href="">海参</a>
+						<a href="">五粮液</a>
+						<a href="">汾酒</a>
+						<a href="">奥克斯</a>
+						<a href="">筋头巴脑</a>
+						<a href="">和田玉</a>
+					</div>
+				</div>
+				<div class="shopping">
+					<a href="">
+						<span class="iconfont icon-gouwuche"><i>购物车</i></span>
+						<span class="circle">0</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="nav clear">
+			<div class="typeArea clear">
+				<a href="" id="allshop" class="allshop">
+					<img src="../../styles/pages/img/smenu.png" alt="" />所有物品
+				</a>
+				<a href="" class="index">首页</a>
+				<a href="">
+					TV直播
+					<span class="iconfont icon-qipao"></span>
+					<i class="hot">热门</i>
+				</a>
+				<a href="">家电馆</a>
+				<a href="">食品馆</a>
+				<a href="">秒杀</a>
+				<a href="">新品</a>
+				<a href="">哏都优品</a>
+				<a href="">促销</a>
+				<div class="listGroup">
+					<div class="listLeft">
+						<ul class="leftNav"></ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	<script src="../../static/scripts/require.js" data-main="../../scripts/pages/head/header.js"></script>
+	
+	<script id="list_left" type="text/html">
+		<%for(let i=0; i<data.num; i++) {%>
+			<li><a href="https://www.ttcj.tv/<%=data.catelist[i].url%>"><%=data.catelist[i].title%></a></li>
+		<%}%>
+	</script>
+	<script id="list_right" type="text/html">
+		
+		<%for(let i=0; i<data.num; i++) {%>
+			<%let right = data.catelist[i];%>
+			<div class="listRight" data-index="<%=i%>">
+				<%for(let j=0; j<right.category2.length; j++) {%>
+					<div class="group">
+						<h3><a href="https://www.ttcj.tv/<%=right.category2[j].url%>"><%=right.category2[j].title%></a></h3>
+						<ul>
+							<%for(let k=0; k<right.category2[j].sgroup.length; k++) {%>
+								<li>
+									<a href="href="https://www.ttcj.tv/<%=right.category2[j].url%>"><%=right.category2[j].sgroup[k].title%></a>
+								</li>
+							<%}%>
+						</ul>
+					</div>
+				<%}%>
+			</div>
+		<%}%>
+	</script>

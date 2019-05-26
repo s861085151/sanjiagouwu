@@ -1,0 +1,250 @@
+@import "../common";
+
+.header {
+    @extend .typeArea;
+    height: 100px;
+    a {
+        display: block;
+        width: 1200px;
+        height: 100px;
+        img {
+            width: 200px;
+            height: 100px;
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ffddd9;
+    background-color: #ffddd9;
+    box-sizing: border-box;
+    .typeArea {
+        height: 440px;
+        margin: 30px auto;
+        .banner {
+            margin: 10px 130px 30px 134px;
+            float: left;
+        }
+        .log-reg {
+            float: left;
+            width: 380px;
+            height: 440px;
+            background: #fff;
+            position: relative;
+            .click_tap {
+                width: 100%;
+                height: 60px;
+                h5 {
+                    float: left;
+                    width: 155px;
+                    height: 60px;
+                    font-size: 18px;
+                    text-align: center;
+                    line-height: 60px;
+                    margin: 0 15px;
+                    cursor: pointer;
+                    color: #333333;
+                    box-sizing: border-box;
+                }
+                .hover {
+                    color: #4185f4;
+                    border-bottom: 3px solid #4185f4
+                }
+            }
+            //登陆
+            .log_input {
+                border-top: 1px solid #e2e6ef;
+                width: 380px;
+                height: 225px;
+                form {
+                    .user_log {
+                        width: 300px;
+                        height: 40px;
+                        border: 1px solid #d1d5de;
+                        border-radius: 30px;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        position: relative;
+                        box-sizing: border-box;
+                        input {
+                            width: 215px;
+                            height: 38px;
+                            position: absolute;
+                            top: 0;
+                            left: 50px;
+                            border: none;
+                            outline: none;
+                            font-size: 16px;
+                        }
+                        span {
+                            position: absolute;
+                            top: 8px;
+                            left: 20px;
+                            color: #9d9d9d;
+                            font-size: 20px;
+                        }
+                    }
+                    .pwd_log {
+                        font-size: 22px !important;
+                        @extend .user_log;
+                        margin-top: 22px;
+                        .eyes {
+                            top: 8px;
+                            left: 270px;
+                            color: #4185f4;
+                            cursor: pointer;
+                        }
+                    }
+                    .login {
+                        width: 300px;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        input {
+                            width: 300px;
+                            height: 40px;
+                            background: #BABABA;
+                            border-radius: 20px;
+                            outline: none;
+                            border: 0;
+                            cursor: pointer;
+                            font-size: 18px;
+                            color: #fff;
+                        }
+                    }
+                } 
+            }
+            //注册
+            .reg_input {
+                @extend .log_input;
+                display: none;
+                height: 285px;
+                .user_reg {
+                    @extend .user_log;
+                    p {
+                        position: absolute;
+                        top: 41px;
+                        left: 50px;
+                        font-size: 12px;
+                        color: red;
+                        display: none;
+                    }
+                }
+                .pwd_reg {
+                    overflow: hidden;
+                    width: 300px;
+                    margin: 22px auto 0;
+                    position: relative;
+                    input {
+                        float: left;
+                        width: 210px;
+                        height: 40px;
+                        border: 1px solid #d1d5de;
+                        border-radius: 30px;
+                        padding-left: 50px;
+                        font-size: 16px;
+                        outline: none;
+                        box-sizing: border-box;
+                    } 
+                    span {
+                        position: absolute;
+                        top: 8px;
+                        left: 20px;
+                        color: #9d9d9d;
+                        font-size: 20px;
+                    }
+                    .canvas {
+                        float: right;
+                        width: 85px;
+                        height: 38px;
+                        canvas {
+                            width: 100%;
+                            height: 38px;
+                            margin-left: -10px;
+                        }
+                    }
+                }
+                .node_reg {
+                    @extend .user_reg;
+                    margin-top: 22px !important;
+                    input {
+                        width: 140px;
+                    }
+                    span {
+                        font-size: 26px !important;
+                        left: 16px !important;
+                    }
+                    a {
+                        width: 110px;
+                        height: 32px;
+                        border-radius: 16px;
+                        position: absolute;
+                        top: 4px;
+                        left: 185px;
+                        font-size: 12px;
+                        text-align: center;
+                        background: #BABABA;
+                        line-height: 32px;
+                        color: #fff;
+                    }
+                }
+                .btn_bg {
+                    background: #4185f4 !important;
+                }
+                .agreement {
+                    width: 300px;
+                    height: 30px;
+                    margin: 0 auto;
+                    line-height: 30px;
+                    position: relative;
+                    .error {
+                        width: 300px;
+                        height: 40px;
+                        margin: 0 auto;
+                        line-height: 40px;
+                        padding-left: 10px;
+                        color: #f33047;
+                        box-sizing: border-box;
+                        position: absolute;
+                        top : -80px;
+                        display: none;
+                    }
+                    p {
+                        
+                        float: left;
+                        input {
+                            vertical-align: middle;
+                        }
+                        i {
+                            margin-left: 5px;
+                            color: #949494;
+                            font-size: 12px;
+                        }
+                    }
+                    a {
+                        float: left;
+                        font-size: 12px;
+                        color: #F33047;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .bottom_group {
+                width: 300px;
+                margin: 0 auto;
+                margin-top: 22px;
+                padding-top: 10px;
+                a {
+                    float: left;
+                    font-size: 14px;
+                    color: #333333;
+                }
+                .television {
+                    float: right;
+                    color: #4185f4;
+                }
+            }
+        }
+    }
+}

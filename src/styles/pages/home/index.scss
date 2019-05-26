@@ -1,0 +1,735 @@
+@import "../common";
+
+.listGroup {
+    display: block !important;
+}
+//banner
+.banner {
+    width: $width;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    #banner>li {
+        width: $width;
+        height: 400px;
+        position: absolute;
+        .bannerbox {
+            width: 1200px;
+            margin: 0 auto;
+            a {
+                display: block;
+            }
+        }
+    }
+    .show {
+        display: block;
+    }
+    .hide {
+        display: none;
+    }
+    
+    .banner1, .banner5, .banner6 {
+        background: #fff;
+    }
+    .banner2 {
+        background: #55872c;
+    }
+    .banner3 {
+        background: #1d3261;
+    }
+    .banner4 {
+        background: #fdef09;
+    }
+    
+    //圆点
+    .disc {
+        width: 120px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+        height: 10px;
+        li {
+            width: 10px;
+            height: 10px;
+            background: #DCDADC;
+            border-radius: 5px;
+            float: left;
+            margin: 0 5px;
+            box-shadow : 1px 1px 3px #f8f8f8;
+            cursor: pointer;
+        }
+        .on {
+            background: #4185F4;
+        }
+    }
+}
+
+//今日直播
+.todayvideo {
+    position: relative;
+    .title_line {
+        width: 440px;
+        height: 1px;
+        background: #585858;
+        margin: 30px auto;
+        margin-bottom: 40px;
+        position: relative;
+        .module_title {
+            width: 160px;
+            position: absolute;
+            background: #fff;
+            right: 0;
+            left: 0;
+            margin: auto;
+            top: -20px;
+            text-align: center;
+            .title_img {
+                font-size: 30px;
+                color: #A5A5AB;
+                margin-right: 3px;
+                vertical-align: middle;
+            }
+            .title {
+                font-size: 26px;
+                color: #666;
+                vertical-align: middle;
+            }
+        }
+        
+    }
+    .subtitle {
+        text-align: center;
+        font-size: 20px;
+        color: #8F8F8F;
+        position: relative;
+        .right {
+            position: absolute;
+            right: 0;
+        }
+    }
+    .video_list {
+        width: 100%;
+        height: 350px;
+        border-radius: 8px;
+        box-shadow: 0 0 6px 4px #F0F4FB;
+        margin: 20px auto;
+        overflow: hidden;
+        .video_left {
+            float: left;
+            width: 552px;
+            height: 310px;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: relative;
+            background: red;
+        }
+        .goods_right {
+            float: left;
+            padding-left: 50px;
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 585px;
+            height: 310px;
+            box-sizing: border-box;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            .goods_list {
+                width: 100%;
+                height: 105px;
+                border-left: 1px dashed #A5B9FF;
+                position: relative;
+                .circle {
+                    position: absolute;
+                    top: 45px;
+                    left: -6px;
+                }
+                .time {
+                    position: absolute;
+                    top: 40px;
+                    left: 20px;
+                    color: #666;
+                }
+                .information {
+                    background: url(../../../styles/pages/img/nowBj2.png) no-repeat;
+                    width: 380px;
+                    height: 90px;
+                    font-size: 16px;
+                    position: absolute;
+                    top: 0px;
+                    right: 30px;
+                    .goods_img {
+                        width: 70px;
+                        height: 70px;
+                        margin-top: 10px;
+                        margin-left: 30px;
+                        float: left;  
+                    }
+                    .title{
+                        float: left;
+                        width: 240px;
+                        height: 70px;
+                        margin-top: 10px;
+                        margin-left: 20px;
+                        font-size: 16px;
+                        .name {
+                            display: block;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            margin-bottom: 18px;
+                        }
+                        .price {
+                            color: #f33047;
+                            font-size: 20px;
+                            float: left;
+                        }
+                        .rightAway {
+                            background: #f33047;
+                            text-decoration: none;
+                            color: #fff;
+                            border-radius: 20px;
+                            width: 95px;
+                            height: 30px;
+                            line-height: 30px;
+                            font-size: 14px;
+                            float: right;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .listgoods {
+        height: 400px;
+        margin: 20px auto;
+    }
+    .allgoods {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        font-size: 16px;
+        a {
+            color: #666666;
+        }
+    }
+    
+}
+//宣传册
+.brochure {
+    margin: 20px auto;
+}
+
+//热销榜单 
+.hotlist {
+    @extend .todayvideo;
+    .hot_top1 {
+        width: 300px;
+        height: 400px;
+        border: 8px solid #FFC2BD;
+        box-sizing: border-box;
+        float: left;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            .shops {
+                position: relative;
+                height: 284px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    transition: all ease .5s;
+                }
+                &:hover img {
+                    transform: scale(1.2);
+                }
+                em {
+                    position: absolute;
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    top: 5px;
+                    left: 5px;
+                    background: url(../../../styles/pages/img/rexiao.svg) no-repeat;
+                    text-align: center;
+                    span {
+                        display: block;
+                        margin-top: 10px;
+                        color: #fff;
+                    }
+                }
+            }
+            .name {
+                width: 96%;
+                margin: 5px auto;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #666;
+                font-size: 16px;
+            }
+            .price {
+                margin-left: 2%;
+                color: #f33047;
+                font-size: 18px;
+                i {
+                    margin-left: -3px;
+                    font-size: 26px;
+                }
+            }
+        }
+    }    
+    .hot_others {
+        width: 900px;
+        height: 320px;
+        overflow: hidden;
+        float: left;
+        margin-top: 80px;
+        .listbox {
+            width: 4275px;
+            left: 0;
+            position: relative;
+            overflow: hidden;
+            li {
+                @extend .hot_top1;
+                width: 225px;
+                height: 320px;
+                float: left;
+                position: relative;
+                border: 1px solid #E1E8F0;
+                a {
+                    .shops {
+                        height: 223px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+//新品推荐
+.newlist {
+    @extend .hotlist,.typeArea;
+    overflow: hidden;
+    .listgoods {
+        height: 640px;
+        >a {
+            float: left;
+            display: block;
+            width: 240px;
+            height: 320px;
+            border: 1px solid #E1E8F0;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+            >div {
+                color: #8F8F8F;
+                width: 90%;
+                margin: 10px auto;
+                .title {
+                    color: #757575;
+                    font-size: 18px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .bottom {
+                    font-size: 18px;
+                    color: #f33047;
+                    margin-top: 5px;
+                    .price {
+                        float: left;
+                        i {
+                            font-size: 26px;
+                        }
+                    }
+                    .lijin {
+                        float: right;
+                        margin-top: 3px;
+                        img {
+                            width: 42px;
+                            vertical-align: middle;
+                        }
+                        i {
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: -1px 1px 9px 3px #DADBDC;
+                z-index: 11;
+            }
+        }
+        .special {
+            width: 720px;
+            overflow: hidden;
+        }
+    }}
+//食品健康
+.foodhealth {
+    @extend .newlist;
+    overflow: hidden;
+    .food_product {
+        overflow: hidden;
+        .food_left {
+            width: 952px;
+            float: left;
+            @extend .listgoods;
+            .minbanner {
+                img {
+                    width: 280px;
+                    margin-left: -30px;
+                }
+                overflow: visible;
+            }
+            .special {
+                width: 476px;
+                div {
+                    width: 177px;
+                    margin-left: 17px;
+                    float: left;
+                    .title {
+                        white-space: normal;
+                        overflow: visible;
+                    }
+                }
+                .right {
+                    width: 280px;
+                    float: right;
+                    margin-top: 35px;
+                }
+            }
+            a {
+                width: 238px;
+            }
+        }
+        .food_right {
+            float: right;
+            height: 640px;
+            width: 248px;
+            border: 1px solid #E1E8F0;
+            box-sizing: border-box;
+            position: relative;
+            margin-top: 20px;
+            .food_right_top {
+                width: 100%;
+                height: 90px;
+                h5 {
+                    font-size: 22px;
+                    color: #666;
+                    position: relative;
+                    margin-left: 60px;
+                    width: 100px;
+                    line-height: 90px;
+                    .icon-qipao {
+                        font-size: 40px;
+                        color: red;
+                        transform: rotateZ(50deg);
+                        position: absolute;
+                        top: -3px;
+                        left: 85px;
+                    }
+                    .text {
+                        position: absolute;
+                        width: 30px;
+                        font-size: 13px;
+                        color: #fff;
+                        top: -3px;
+                        left: 94px;
+                        animation: hot 1s linear infinite;
+                    }
+                }
+                .line_left {
+                    width: 30px;
+                    border: 1px solid #666666;
+                    position: absolute;
+                    top: 44px;
+                    left: 20px;
+                }
+                .line_right {
+                    width: 30px;
+                    border: 1px solid #666666;
+                    position: absolute;
+                    top: 44px;
+                    right: 20px;
+                }
+                
+            }
+            .food_right_list {
+                height: 510px;
+                width: 100%;
+                overflow: hidden;
+                ul {
+                    position: relative;
+                }
+                li {
+                    height: 74px;
+                    width: 90%;
+                    margin: 0 5%;
+                    a {
+                        display: block;
+                        position: relative;
+                        overflow: hidden;
+                        height: 100%;
+                        img {
+                            width: 70px;
+                            float: left;
+                        }
+                        .ranking {                      
+                            display: block;
+                            position: absolute;
+                            width: 20px;
+                            height: 20px;
+                            top: 0;
+                            left: 0;
+                            color: #fff;
+                            background: #ff0000;
+                            text-align: center;
+                        }
+                        div {
+                            float: right;
+                            h5 {
+                                width: 128px;
+                                color: #666;
+                                font-size: 16px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            p {
+                                font-size: 18px;
+                                color: #F4495D;
+                                margin-top: 15px;
+                                i {
+                                    font-size: 26px;
+                                    margin-left: 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+//厨房用品
+.kitchen {
+    @extend .foodhealth;
+    .kitchen_product {
+        @extend .food_product;
+        .kitchen_left {
+            @extend .food_left;
+        }
+        .kitchen_right {
+            @extend .food_right;
+            .kitchen_right_top {
+                @extend .food_right_top;
+            }
+            .kitchen_right_list {
+                @extend .food_right_list;
+            }
+        }
+    }
+    
+}
+
+@keyframes hot {
+    0% {
+        transform: rotateZ(0deg) scale(0.8);
+    }
+    20% {
+        transform: rotateZ(5deg) scale(1.0);
+    }
+    40% {
+        transform: rotateZ(0deg) scale(0.8);
+    }
+    60% {
+        transform: rotateZ(-2deg) scale(1.0);
+    }
+    75% {
+        transform: rotateZ(-2deg) scale(1.0);
+    }
+    100% {
+        transform: rotateZ(0deg) scale(1.0);
+    }
+}
+
+//更多分类
+.more {
+    @extend .kitchen;
+    overflow: visible;
+    .module_nav {
+        width: 780px;
+        height: 45px;
+        margin: 30px auto;
+        margin-bottom: 45px;
+        a {
+            float: left;
+            width: 89px;
+            height: 35px;
+            text-align: center;
+            color: #717171;
+            margin-left: 20px;
+            line-height: 18px;
+            padding-top: 10px;
+            font-size: 16px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .init {
+            color: #fff;
+            background: url(../img/gdnew.png) no-repeat;
+        }
+        .hover {
+            color: #fff;
+            background: url(../img/stab.png) no-repeat;
+        }
+    }
+    .more_list {
+        width: 100%;
+        height: 340px;
+        
+        .electric {
+            @extend .listgoods;
+             width: 100%;
+             height: 340px;
+             position: absolute;
+             display: none;
+            a {
+                display: block;
+                float: left;
+                width: 240px;
+                &:hover {
+                    transition: box-shadow 0.5s;
+                }
+            }
+            .minbanner {
+                overflow: visible;
+                img {
+                    width: 280px;
+                    margin-left: -30px;
+                }
+            }
+        }
+        #electric{
+         display: block;   
+        }
+//      .homedress, .clothing, .cosmetics, .jewelry, .sports, .travel{
+//          @extend .electric;
+//          width: 100%;
+//      }
+    }
+}
+
+//左侧导航
+.sideLeftNav{
+    width: 100px;
+    position: fixed;
+    position: fixed;
+    top: 30%;
+    left: 0px;
+    background: #fff;
+    border: 1px solid #E2E6EF;
+    text-align: center;
+    z-index: 2000;
+    display: none;
+    li {
+        padding: 0 5%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        a {
+            display: block;
+            height: 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            line-height: 25px;
+            color: #6177AF;
+        }
+        .active {
+            background: #4185f4;
+            color: #fff;
+        }
+    }
+    >div {
+        width: 76px;
+        margin: auto;
+        img {
+            width: 100%;
+        }
+        >p {
+            font-size: 12px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+//右侧导航
+.sideRightNav {
+    width: 36px;
+    background: #727481;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 9999;
+    display: none;
+    li {
+        width: 36px;
+        height: 36px;
+        position: relative;
+        border-bottom: 1px solid #fff;
+        a {
+            color: #fff;
+           
+            margin-left: 7px;
+            line-height: 36px;
+            .iconfont {
+                font-size: 22px;
+            }
+            .text {
+                width: 80px;
+                height: 100%;
+                font-size: 16px !important;
+                position: absolute;
+                top: 0;
+                left: -90px;
+                background: #4185f4;
+                border-radius: 30px 0 0 30px;
+                display: none;
+                padding-left: 10px;
+                text-align: center;
+            }
+            .number {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background: #f33047;
+                margin: 0;
+                color: #ffffff;
+                font-size: 12px;
+                text-align: center;
+                line-height: 16px;
+            }
+        }
+        &:hover {
+            background: #4185f4;
+        }
+        &:hover .text {
+            display: block;
+        }
+    }
+}
