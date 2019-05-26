@@ -189,7 +189,7 @@ require(["../../static/conf/config.js"], function(){
 		})
 		
 		
-		
+		//获取网址上的id
 		function GetUrlParam(paraName) {
             var url = document.location.toString();
             var arrObj = url.split("?");
@@ -226,6 +226,23 @@ require(["../../static/conf/config.js"], function(){
 				$(".bigPicbox img").attr("src","https://image.ttcj.tv/item_images/"+num+"/"+goodId+"M1.jpg")
 			}
 		}
+		
+		//商品详情滚动切换
+		$(window).scroll(function() {
+			$(".content_header_nav li").removeClass("active")
+			if($(window).scrollTop()>=$(".goods_content_text").offset().top && $(window).scrollTop()<$(".goods_content_video").offset().top) {
+				$(".content_header_nav li").eq(1).addClass("active")
+			}
+			if($(window).scrollTop()>=$(".goods_content_video").offset().top && $(window).scrollTop()<$(".goods_evaluate").offset().top) {
+				$(".content_header_nav li").eq(0).addClass("active")
+			}
+			if($(window).scrollTop()>=$(".goods_evaluate").offset().top) {
+				$(".content_header_nav li").eq(2).addClass("active")
+			}
+		})
+		
+			
+		$(".content_header").children().children(".price").text($(".rmb").text()+$(".money").text())
 		
 	})
 })

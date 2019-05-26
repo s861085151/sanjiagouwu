@@ -266,6 +266,8 @@ require(["../../static/conf/config.js"], function(){
 			})
 			
 			
+			
+			
 			//左右侧边栏
 			//今日直播
 			let todayvideo_top = $(".todayvideo").offset().top;

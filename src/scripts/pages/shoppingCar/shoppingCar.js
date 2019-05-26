@@ -22,7 +22,9 @@ require(["../../static/conf/config.js"], function(){
 				})
 				if(--all[index].p_count == 0) {
 					all.splice(index,1)
+					$(this).parent().parent().remove();
 				}
+				
 				let goodCount = $(this).siblings(".p_count").val($(this).siblings(".p_count").val()-1);
 				$(this).parent().siblings(".goods_money").text("￥"+$(this).parent().siblings(".goods_unitPrice").text()*$(this).siblings(".p_count").val())
 				localStorage.setItem("goodCar", JSON.stringify(all));

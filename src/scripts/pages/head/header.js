@@ -33,18 +33,22 @@ require(["../../static/conf/config.js"], function(){
 				
 				let leftNav = $(".leftNav").children();
 				let rightNav = $(".listRight");
+				let _index = null;
 				leftNav.each(function(index) {
 					$(this).on("mouseenter", function() {
+						_index = index;
 						rightNav.eq(index).show().siblings(":not('.listLeft')").hide();
-						$(".listGroup").width(545)
+						$(".listGroup").width(545);
+						console.log(_index)
 					})
+					
 					$(this).on("mouseleave", function() {
 						rightNav.hide();
 						$(".listGroup").width(190);
 					})
 					
 					rightNav.on("mouseenter", function() {
-						rightNav.eq(index).show().siblings(":not('.listLeft')").hide();;
+						rightNav.eq(_index).show().siblings(":not('.listLeft')").hide();;
 						$(".listGroup").width(545);
 					})
 					rightNav.on("mouseleave", function() {
